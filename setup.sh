@@ -132,11 +132,11 @@ mkdir /var/lib/crot-script;
 clear
 #echo -e "${red}♦️${NC} ${green}Established By JsPhantom 2022${NC} ${red}♦️${NC}"
 #DOWNLOAD SOURCE SCRIPT
-echo -e "${red}    ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
-echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${red}    ♦️${NC} ${green} \e[39;1mCUSTOM SETUP DOMAIN VPS     ${NC}"
+echo -e "${red}============================================\033[0m${NC}"
 echo "1. Use Domain From Script / Gunakan Domain Dari Script"
 echo "2. Choose Your Own Domain / Pilih Domain Sendiri"
-echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${red}============================================\033[0m${NC}"
 read -rp "Choose Your Domain Installation : " dom 
 
 if test $dom -eq 1; then
@@ -197,9 +197,9 @@ rm -f /root/ssh-vpn.sh
 echo "1.0" > /home/ver
 clear
 echo ""
-echo -e "${RB}      .-------------------------------------------.${NC}"
+echo -e "${RB}      .============================================.${NC}"
 echo -e "${RB}      |${NC}    ${CB}Installation Has Been Completed${NC}         ${RB}|${NC}"
-echo -e "${RB}      '-------------------------------------------'${NC}"
+echo -e "${RB}      '============================================'${NC}"
 echo -e "${CB}————————————————————————————————————————————————————————${NC}"
 echo -e "      ${RB}🚀 ${NC} ${WB}Premium Autoscript By JsPhantom ${NC} ${RB}🚀 ${NC}"
 echo -e "${CB}————————————————————————————————————————————————————————${NC}"
