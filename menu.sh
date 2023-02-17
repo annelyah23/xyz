@@ -193,13 +193,11 @@ echo -e "\e[36m╚============================================╝\033[0m
  ${NC}[\033[1;36m•2 \033[0m]  ${NC}\033[0;32mXRAY Vless WS Panel
  ${NC}[\033[1;36m•3 \033[0m]  ${NC}\033[0;32mXRAY Trojan WS Panel
  ${NC}[\033[1;36m•4 \033[0m]  ${NC}\033[0;32mXRAY Trojan TCP XTLS Panel
- ${NC}[\033[1;36m•5 \033[0m]  ${NC}\033[0;32mXRAY Trojan TCP Panel
- ${NC}[\033[1;36m•6 \033[0m]  ${NC}\033[0;32mWSS Converter Panel"
+ ${NC}[\033[1;36m•5 \033[0m]  ${NC}\033[0;32mXRAY Trojan TCP Panel"
 echo -e "\e[36m╔============================================╗\033[0m"
 echo -e " \033[35;1m              \033[0;33m  \033[35;1mOTHERS MENU \033[0;33m                \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m
  ${NC}[\033[1;36m•7 \033[0m] ${NC} \033[0;32mInstall Ads Block
- ${NC}[\033[1;36m•8 \033[0m] ${NC} \033[0;32mInstall TCP BBR
  ${NC}[\033[1;36m•9 \033[0m] ${NC} \033[0;32mAds Block Panel
  ${NC}[\033[1;36m•10\033[0m] ${NC} \033[0;32mDNS Changer
  ${NC}[\033[1;36m•11\033[0m] ${NC} \033[0;32mNetflix Checker
