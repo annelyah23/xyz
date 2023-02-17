@@ -16,7 +16,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo -e "\033[0;34m╔============================================╗\\033[0m"
         echo -e "\e[0;35m         Renew XRAY Vmess WS Account    \e[0m"
-        echo -e "\033[0;34m============================================━━\033[0m"
+        echo -e "\033[0;34m╚============================================╝\033[0m"
 		echo ""
 		echo "You have no existing clients!"
         echo ""
