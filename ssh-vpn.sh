@@ -284,8 +284,6 @@ chmod +x menu-xtr
 chmod +x menu-xrt
 chmod +x certxray
 chmod +x ins-helium
-chmod +x bbr
-chmod +x wssgen
 chmod +x menu
 chmod +x add-host
 chmod +x speedtest
