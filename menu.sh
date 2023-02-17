@@ -3,7 +3,7 @@
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
 # Auther  : Geo Project
-# (C) Copyright 2022
+# (C) Copyright 2023
 # =========================================
 P='\e[0;35m'
 B='\033[0;36m'

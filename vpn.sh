@@ -3,7 +3,7 @@
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
 # Auther  : Adit Ardiansyah
-# (C) Copyright 2022
+# (C) Copyright 2023
 # =========================================
 
 # // Root Checking

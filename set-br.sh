@@ -3,7 +3,7 @@
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
 # Auther  : JsPhantom
-# (C) Copyright 2022
+# (C) Copyright 2023
 # =========================================
 export Server_URL="raw.githubusercontent.com/annelyah23/xyz/main"
 

@@ -3,7 +3,7 @@
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
 # Auther  : JsPhantom
-# (C) Copyright 2022
+# (C) Copyright 2023
 # =========================================
 clear
 DEFBOLD='\e[39;1m'
@@ -130,7 +130,7 @@ fi
 mkdir /var/lib/premium-script;
 mkdir /var/lib/crot-script;
 clear
-#echo -e "${red}♦️${NC} ${green}Established By JsPhantom 2022${NC} ${red}♦️${NC}"
+#echo -e "${red}♦️${NC} ${green}Established By JsPhantom 2023${NC} ${red}♦️${NC}"
 #DOWNLOAD SOURCE SCRIPT
 echo -e "${red}    ♦️${NC} ${green} \e[39;1mCUSTOM SETUP DOMAIN VPS     ${NC}"
 echo -e "${red}============================================\033[0m${NC}"
