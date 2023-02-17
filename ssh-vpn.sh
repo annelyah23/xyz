@@ -260,8 +260,6 @@ systemctl enable resolvconf.service
 # download script
 cd /usr/local/sbin
 wget -O ins-helium "https://${Server_URL}/ins-helium.sh"
-wget -O bbr "https://${Server_URL}/bbr.sh"
-wget -O wssgen "https://${Server_URL}/wssgen.sh"
 wget -O add-host "https://${Server_URL}/add-host.sh"
 wget -O speedtest "https://${Server_URL}/speedtest_cli.py"
 wget -O xp "https://${Server_URL}/xp.sh"
