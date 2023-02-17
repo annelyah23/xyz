@@ -6,6 +6,12 @@
 # (C) Copyright 2022
 # =========================================
 clear
+red='\e[1;31m'
+green='\e[0;32m'
+yell='\e[1;33m'
+tyblue='\e[1;36m'
+purple='\e[0;35m'
+NC='\e[0m'
 fun_bar() {
     CMD[0]="$1"
     CMD[1]="$2"
@@ -67,9 +73,9 @@ res11() {
 }
 
 clear
-echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
-echo -e " \E[0;41;36m           RESTART SERVICE SERVER           \E[0m"
-echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
+echo -e "\e[36m╔============================================╗\033[0m"
+echo -e " \e[0;35m           RESTART SERVICE SERVER           \e[0m"
+echo -e "\e[36m╚============================================╝\033[0m"
 echo -e ""
 echo -e "  \033[1;91m Service Restart Fail2ban\033[1;37m"
 fun_bar 'res1'
