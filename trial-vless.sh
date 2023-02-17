@@ -340,7 +340,7 @@ service cron restart
 
 clear
 echo -e ""
-echo -e "═══════════════════"
+echo -e "════[TRIAL XRAY VLESS WS]════"
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
 echo -e "Port TLS          : 443"
