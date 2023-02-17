@@ -155,7 +155,7 @@ menu
 }
 
 echo -e "\e[36m╔============================================╗\033[0m"
-echo -e " \033[35;1m             \033[0;33m ┃ \033[35;1mINFO SERVER \033[0;33m┃              \033[0m"
+echo -e " \033[35;1m             \033[0;33m  \033[35;1mINFO SERVER \033[0;33m              \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m"
 load_cpu=$(printf '%-3s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
 ram_used=$(free -m | grep Mem: | awk '{print $3}')
@@ -187,40 +187,40 @@ echo -e " Daily Data Usage   :  ${yell}$daily_usage${N}"
 echo -e " Monthly Data Usage :  ${yell}$monthly_usage${N}"
 echo -e "\e[36m╔============================================╝\033[0m"
 echo -e "\e[36m╒============================================╗\033[0m"
-echo -e " \033[35;1m                \033[0;33m┃ \033[35;1mXRAY MENU \033[0;33m┃                 \033[0m"
+echo -e " \033[35;1m                \033[0;33m \033[35;1mXRAY MENU                  \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m
- [\033[1;36m•1 \033[0m]  XRAY Vmess WS Panel
- [\033[1;36m•2 \033[0m]  XRAY Vless WS Panel
- [\033[1;36m•3 \033[0m]  XRAY Trojan WS Panel
- [\033[1;36m•4 \033[0m]  XRAY Trojan TCP XTLS Panel
- [\033[1;36m•5 \033[0m]  XRAY Trojan TCP Panel
- [\033[1;36m•6 \033[0m]  WSS Converter Panel"
+ ${NC}[\033[1;36m•1 \033[0m]  ${NC}\033[0;32mXRAY Vmess WS Panel
+ ${NC}[\033[1;36m•2 \033[0m]  ${NC}\033[0;32mXRAY Vless WS Panel
+ ${NC}[\033[1;36m•3 \033[0m]  ${NC}\033[0;32mXRAY Trojan WS Panel
+ ${NC}[\033[1;36m•4 \033[0m]  ${NC}\033[0;32mXRAY Trojan TCP XTLS Panel
+ ${NC}[\033[1;36m•5 \033[0m]  ${NC}\033[0;32mXRAY Trojan TCP Panel
+ ${NC}[\033[1;36m•6 \033[0m]  ${NC}\033[0;32mWSS Converter Panel"
 echo -e "\e[36m╔============================================╗\033[0m"
-echo -e " \033[35;1m              \033[0;33m ┃ \033[35;1mOTHERS MENU \033[0;33m┃                \033[0m"
+echo -e " \033[35;1m              \033[0;33m  \033[35;1mOTHERS MENU \033[0;33m                \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m
- [\033[1;36m•7 \033[0m]  Install Ads Block
- [\033[1;36m•8 \033[0m]  Install TCP BBR
- [\033[1;36m•9 \033[0m]  Ads Block Panel
- [\033[1;36m•10\033[0m]  DNS Changer
- [\033[1;36m•11\033[0m]  Netflix Checker
- [\033[1;36m•12\033[0m]  Limit Bandwith Speed"
+ ${NC}[\033[1;36m•7 \033[0m] ${NC} \033[0;32mInstall Ads Block
+ ${NC}[\033[1;36m•8 \033[0m] ${NC} \033[0;32mInstall TCP BBR
+ ${NC}[\033[1;36m•9 \033[0m] ${NC} \033[0;32mAds Block Panel
+ ${NC}[\033[1;36m•10\033[0m] ${NC} \033[0;32mDNS Changer
+ ${NC}[\033[1;36m•11\033[0m] ${NC} \033[0;32mNetflix Checker
+ ${NC}[\033[1;36m•12\033[0m] ${NC} \033[0;32mLimit Bandwith Speed"
 echo -e "\e[36m╔============================================╗\033[0m"
-echo -e " \033[35;1m               \033[0;33m┃ \033[35;1mSYSTEM MENU \033[0;33m┃               \033[0m"
+echo -e " \033[35;1m               \033[0;33m \033[35;1mSYSTEM MENU \033[0;33m               \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m
- [\033[1;36m•13\033[0m]  Change Domain
- [\033[1;36m•14\033[0m]  Renew Certificate XRAY
- [\033[1;36m•15\033[0m]  Check VPN Status
- [\033[1;36m•16\033[0m]  Check VPN Port
- [\033[1;36m•17\033[0m]  Restart VPN Services
- [\033[1;36m•18\033[0m]  Speedtest VPS
- [\033[1;36m•19\033[0m]  Check RAM
- [\033[1;36m•20\033[0m]  Check Bandwith
- [\033[1;36m•21\033[0m]  Backup
- [\033[1;36m•22\033[0m]  Restore
- [\033[1;36m•23\033[0m]  Reboot
+ ${NC}[\033[1;36m•13\033[0m]  ${NC}\033[0;32mChange Domain
+ ${NC}[\033[1;36m•14\033[0m]  ${NC}\033[0;32mRenew Certificate XRAY
+ ${NC}[\033[1;36m•15\033[0m]  ${NC}\033[0;32mCheck VPN Status
+ ${NC}[\033[1;36m•16\033[0m]  ${NC}\033[0;32mCheck VPN Port
+ ${NC}[\033[1;36m•17\033[0m]  ${NC}\033[0;32mRestart VPN Services
+ ${NC}[\033[1;36m•18\033[0m]  ${NC}\033[0;32mSpeedtest VPS
+ ${NC}[\033[1;36m•19\033[0m]  ${NC}\033[0;32mCheck RAM
+ ${NC}[\033[1;36m•20\033[0m]  ${NC}\033[0;32mCheck Bandwith
+ ${NC}[\033[1;36m•21\033[0m]  ${NC}\033[0;32mBackup
+ ${NC}[\033[1;36m•22\033[0m]  ${NC}\033[0;32mRestore
+ ${NC}[\033[1;36m•23\033[0m]  ${NC}\033[0;32mReboot
 "
 if [[ $serverV > $myver ]]; then
-echo -e " [\033[1;36m•24\033[0m]  Update Autoscript To V$serverV\n"
+echo -e " ${NC}[\033[1;36m•24\033[0m]  Update Autoscript To V$serverV\n"
 up2u="updatews"
 else
 up2u="menu"
@@ -228,7 +228,7 @@ fi
 echo -e " \033[1;37mType [ x ] To Exit From Menu \033[0m"
 echo ""
 echo -e "\e[36m╔============================================╗\033[0m"
-echo -e " Version       :\033[1;36m Multiport Websocket $myver\e[0m"
+echo -e " Version       : \033[0;32mMultiport Websocket $myver\e[0m"
 echo -e " Client Name   : $Name"
 echo -e " Expiry Script : $Exp"
 echo -e " Status Script : ${G}Lifetime${NC}"
