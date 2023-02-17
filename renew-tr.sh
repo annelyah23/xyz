@@ -8,23 +8,26 @@
 clear
 red='\e[1;31m'
 green='\e[0;32m'
+yell='\e[1;33m'
+tyblue='\e[1;36m'
+purple='\e[0;35m'
 NC='\e[0m'
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/trojanws.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\\E[0;41;36m   Renew XRAY Trojan WS Account   \E[0m"
-        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo -e "\033[0;34m╔============================================╗\033[0m"
+        echo -e "\e[0;35m         Renew XRAY Trojan WS Account   \033[0m"
+        echo -e "\033[0;34m╚============================================╝\033[0m"
 		echo ""
 		echo "You have no existing clients!"
         echo ""
 		exit 1
 	fi
-	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\\E[0;41;36m   Renew XRAY Trojan WS Account   \E[0m"
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	echo -e "\033[0;34m╔============================================╗\033[0m"
+    echo -e "\e[0;35m         Renew XRAY Trojan WS Account   \033[0m"
+    echo -e "\033[0;34m╚============================================╝\033[0m"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	echo -e "\033[0;34m============================================\033[0m"
 	grep -E "^### " "/usr/local/etc/xray/trojanws.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -50,10 +53,10 @@ service cron restart
 clear
 echo ""
 echo " XRAY Trojan WS Account Renewed"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m============================================\033[0m"
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m============================================\033[0m"
 echo -e ""
 echo -e "Autoscript By JsPhantom"
 echo -e ""
