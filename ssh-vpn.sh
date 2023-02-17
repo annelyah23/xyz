@@ -267,7 +267,6 @@ wget -O menu "https://${Server_URL}/menu.sh"
 wget -O status "https://${Server_URL}/status.sh"
 wget -O info "https://${Server_URL}/info.sh"
 wget -O restart "https://${Server_URL}/restart.sh"
-wget -O ram "https://${Server_URL}/ram.sh"
 wget -O dns "https://${Server_URL}/dns.sh"
 wget -O nf "https://${Server_URL}/media.sh"
 wget -O limit "https://${Server_URL}/limit-speed.sh"
@@ -291,7 +290,6 @@ chmod +x xp
 chmod +x status
 chmod +x info
 chmod +x restart
-chmod +x ram
 chmod +x dns
 chmod +x nf
 chmod +x limit
