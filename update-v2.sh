@@ -24,7 +24,6 @@ if [[ -e /usr/local/bin/xray ]]; then
 	 rm nf
 	 rm ins-helium
 	 rm limit
-	 rm bbr
 	 rm menu
 	 #rm add-tr
          #rm add-vless
@@ -64,7 +63,6 @@ else
 	 rm nf
 	 rm ins-helium
 	 rm limit
-	 rm bbr
 	 rm menu
 	 #rm add-tr
          #rm add-vless
