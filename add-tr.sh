@@ -276,7 +276,7 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: XRAY_TROJAN_TLS_${user}
+  - name: Xray_Trojan_TLS_${user}
     server: ${sts}${domain}
     port: 443
     type: trojan
@@ -293,7 +293,7 @@ proxy-groups:
   - name: JsPhantom-Autoscript
     type: select
     proxies:
-      - XRAY_TROJAN_TLS_${user}
+      - Xray_Trojan_TLS_${user}
       - DIRECT
 rules:
   - MATCH,JsPhantom-Autoscript
@@ -301,7 +301,7 @@ EOF
 
 clear
 echo -e ""
-echo -e "═════[XRAY TROJAN WS]═════"
+echo -e "═════[Xray Trojan TLS]═════"
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
 echo -e "Port TLS          : 443"
@@ -317,7 +317,7 @@ echo -e "Link WS TLS       : ${trojanlink1}"
 echo -e "═══════════════════"
 echo -e "Link WS None TLS  : ${trojanlink2}"
 echo -e "═══════════════════"
-echo -e "YAML WS TLS       : http://${MYIP2}:81/$user-TRTLS.yaml"
+echo -e "Yaml ws TLS       : http://${MYIP2}:81/$user-TRTLS.yaml"
 echo -e "═══════════════════"
 echo -e "Created On        : $hariini"
 echo -e "Expired On        : $exp"
