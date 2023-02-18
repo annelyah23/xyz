@@ -199,34 +199,21 @@ echo -e " Monthly Data Usage :  ${yell}$monthly_usage${N}"
 echo -e "\e[36m╔======================================================╝\033[0m"
 echo -e "\e[36m╒======================================================╗\033[0m"
 echo -e " \033[35;1m                \033[0;33m \033[35;1m     XRAY MENU                  \033[0m"
-echo -e "\e[36m╚======================================================╝\033[0m
- ${NC}[\033[1;36m•1 \033[0m]  ${NC}\033[0;32mVmess WS Panel
- ${NC}[\033[1;36m•2 \033[0m]  ${NC}\033[0;32mVless WS Panel
- ${NC}[\033[1;36m•3 \033[0m]  ${NC}\033[0;32mTrojan WS Panel
- ${NC}[\033[1;36m•4 \033[0m]  ${NC}\033[0;32mrojan TCP XTLS Panel
- ${NC}[\033[1;36m•5 \033[0m]  ${NC}\033[0;32mTrojan TCP Panel"
+echo -e "\e[36m╚======================================================╝\033[0m"
+echo -e " ${NC}[\033[1;36m•1 \033[0m]  \033[0;32mVmess WS Panel    ${NC}[\033[1;36m•4 \033[0m]  \033[0;32mTrojan TCP XTLS Panel"
+echo -e " ${NC}[\033[1;36m•2 \033[0m]  \033[0;32mVless WS Panel    ${NC}[\033[1;36m•5 \033[0m]  \033[0;32mTrojan TCP Panel"     
+echo -e " ${NC}[\033[1;36m•3 \033[0m]  \033[0;32mTrojan WS Panel"
 echo -e "\e[36m╔======================================================╗\033[0m"
 echo -e " \033[35;1m              \033[0;33m  \033[35;1m     OTHERS MENU \033[0;33m                \033[0m"
-echo -e "\e[36m╚======================================================╝\033[0m
- ${NC}[\033[1;36m•7 \033[0m] ${NC} \033[0;32mInstall Ads Block
- ${NC}[\033[1;36m•9 \033[0m] ${NC} \033[0;32mAds Block Panel
- ${NC}[\033[1;36m•10\033[0m] ${NC} \033[0;32mDNS Changer
- ${NC}[\033[1;36m•11\033[0m] ${NC} \033[0;32mNetflix Checker
- ${NC}[\033[1;36m•12\033[0m] ${NC} \033[0;32mLimit Bandwith Speed"
-echo -e "\e[36m╔======================================================╗\033[0m"
-echo -e " \033[35;1m               \033[0;33m \033[35;1m     SYSTEM MENU \033[0;33m               \033[0m"
-echo -e "\e[36m╚======================================================╝\033[0m
- ${NC}[\033[1;36m•13\033[0m]  ${NC}\033[0;32mChange Domain
- ${NC}[\033[1;36m•14\033[0m]  ${NC}\033[0;32mRenew Certificate XRAY
- ${NC}[\033[1;36m•15\033[0m]  ${NC}\033[0;32mCheck VPN Status
- ${NC}[\033[1;36m•16\033[0m]  ${NC}\033[0;32mCheck VPN Port
- ${NC}[\033[1;36m•17\033[0m]  ${NC}\033[0;32mRestart VPN Services
- ${NC}[\033[1;36m•18\033[0m]  ${NC}\033[0;32mSpeedtest VPS
- ${NC}[\033[1;36m•20\033[0m]  ${NC}\033[0;32mCheck Bandwith
- ${NC}[\033[1;36m•21\033[0m]  ${NC}\033[0;32mBackup
- ${NC}[\033[1;36m•22\033[0m]  ${NC}\033[0;32mRestore
- ${NC}[\033[1;36m•23\033[0m]  ${NC}\033[0;32mReboot
-"
+echo -e "\e[36m╚======================================================╝\033[0m"
+echo -e " ${NC}[\033[1;36m•7 \033[0m] ${NC} \033[0;32mInstall Ads Block   ${NC}[\033[1;36m•16\033[0m]  ${NC}\033[0;32mCheck VPN Port"
+echo -e " ${NC}[\033[1;36m•9 \033[0m] ${NC} \033[0;32mAds Block Panel     ${NC}[\033[1;36m•17\033[0m]  ${NC}\033[0;32mRestart VPN Services"
+echo -e " ${NC}[\033[1;36m•10\033[0m] ${NC} \033[0;32mDNS Changer         ${NC}[\033[1;36m•18\033[0m]  ${NC}\033[0;32mSpeedtest VPS"
+echo -e " ${NC}[\033[1;36m•11\033[0m] ${NC} \033[0;32mNetflix Checker     ${NC}[\033[1;36m•20\033[0m]  ${NC}\033[0;32mCheck Bandwith"
+echo -e " ${NC}[\033[1;36m•12\033[0m] ${NC} \033[0;32mLimit Bandwith Speed${NC}[\033[1;36m•21\033[0m]  ${NC}\033[0;32mBackup"
+echo -e " ${NC}[\033[1;36m•13\033[0m] ${NC} \033[0;32mChange Domain       ${NC}[\033[1;36m•22\033[0m]  ${NC}\033[0;32mRestore"
+echo -e " ${NC}[\033[1;36m•14\033[0m] ${NC} \033[0;32mRenew Certi XRAY    ${NC}[\033[1;36m•23\033[0m]  ${NC}\033[0;32mReboot"
+echo -e " ${NC}[\033[1;36m•15\033[0m] ${NC} \033[0;32mCheck VPN Status"
 if [[ $serverV > $myver ]]; then
 echo -e " ${NC}[\033[1;36m•24\033[0m]  Update Autoscript To V$serverV\n"
 up2u="updatews"
