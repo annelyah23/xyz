@@ -138,9 +138,12 @@ serverV=$( curl -sS https://${Server_URL}/version_check_v2)
 function updatews(){
 clear
 echo -e "[ ${GREEN}INFO${NC} ] Check for Script updates . . ."
-sleep 1
+sleep 2
 cd
 wget -q -O /root/update-v2.sh "https://${Server_URL}/update-v2.sh" && chmod +x update-v2.sh && ./update-v2.sh
+sleep 2
+./install_up.sh
+sleep 5
 rm -f /root/update-v2.sh
 rm -f /home/ver
 sleep 1
