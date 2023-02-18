@@ -186,7 +186,7 @@ echo -e " \033[0;33mSystem Uptime      \033[0;32m:  $uphours $upminutes"
 fi
 echo -e " \033[0;33mMemory Usage       \033[0;32m:  ${ram_used}MB / ${total_ram}MB (${ram_usage}%)"
 echo -e " \033[0;33mCPU Load           \033[0;32m:  $load_cpu"
-echo -e " \033[0;33mKernel          \033[0;32m   :  $(uname -r)"
+echo -e " \033[0;33mKernel          \033[0;32m   :  $(  uname -r) "
 echo -e " \033[0;33mVPN Core           \033[0;32m:  XRAY-CORE"
 echo -e " \033[0;33mDomain          \033[0;32m   :  $domain"
 echo -e " \033[0;33mIP Address      \033[0;32m   :  $IPVPS"
