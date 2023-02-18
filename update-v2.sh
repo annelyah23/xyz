@@ -40,7 +40,6 @@ if [[ -e /usr/local/bin/xray ]]; then
 	 #wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
 	 #wget -O user-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/user-tr.sh" && chmod +x user-tr
 	 #wget -O user-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/user-vless.sh" && chmod +x user-vless
-	 wget -O bbr "https://${Server_URL}/bbr.sh" && chmod +x bbr
 	 echo ""
 	 echo -e "[${green}INFO${NC}] Successfully Install New Update File !"
 	 sleep 1
@@ -81,7 +80,6 @@ else
 	 #wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
 	 #wget -O user-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/user-tr.sh" && chmod +x user-tr
 	 #wget -O user-vless "https://raw.githubusercontent.com/annelyah23/xyz/main//user-vless.sh" && chmod +x user-vless
-	 wget -O bbr "https://${Server_URL}/bbr.sh" && chmod +x bbr
 	 echo ""
 	 echo -e "[${green}INFO${NC}] Successfully Install New Update File !"
 	 sleep 1
