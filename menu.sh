@@ -140,7 +140,7 @@ clear
 echo -e "[ ${GREEN}INFO${NC} ] Check for Script updates . . ."
 sleep 2
 cd
-wget -q -O /root/update-v2.sh "https://${Server_URL}/update-v2.sh" && chmod +x update-v2.sh && ./update-v2.sh
+wget -q -O /root/update-v2.sh "https://raw.githubusercontent.com/annelyah23/xyz/main/update-v2.sh" && chmod +x update-v2.sh && ./update-v2.sh
 sleep 2
 ./install_up.sh
 sleep 5
