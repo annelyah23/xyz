@@ -35,7 +35,7 @@ wget -O nf "https://${Server_URL}/media.sh" && chmod +x nf
 wget -O ins-helium "https://${Server_URL}/ins-helium.sh" && chmod +x ins-helium
 wget -O menu "https://${Server_URL}/menu.sh" && chmod +x menu
 wget -O limit "https://${Server_URL}/limit-speed.sh" && chmod +x limit
-wget -O status "https://raw.githubusercontent.com/annelyah23/xyz/main/status.sh" && chmod +x add-tr
+wget -O status "https://raw.githubusercontent.com/annelyah23/xyz/main/status.sh" && chmod +x status
 wget -O add-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/add-tr.sh" && chmod +x add-tr
 wget -O add-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/add-vless.sh" && chmod +x add-vless
 wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
@@ -76,7 +76,7 @@ wget -O nf "https://${Server_URL}/media.sh" && chmod +x nf
 wget -O ins-helium "https://${Server_URL}/ins-helium.sh" && chmod +x ins-helium
 wget -O menu "https://${Server_URL}/menu.sh" && chmod +x menu
 wget -O limit "https://${Server_URL}/limit-speed.sh" && chmod +x limit
-wget -O status "https://raw.githubusercontent.com/annelyah23/xyz/main/status.sh" && chmod +x add-tr
+wget -O status "https://raw.githubusercontent.com/annelyah23/xyz/main/status.sh" && chmod +x status
 wget -O add-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/add-tr.sh" && chmod +x add-tr
 wget -O add-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/add-vless.sh" && chmod +x add-vless
 wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
