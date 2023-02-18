@@ -142,8 +142,6 @@ sleep 2
 cd
 wget -q -O /root/update-v2.sh "https://raw.githubusercontent.com/annelyah23/xyz/main/update-v2.sh" && chmod +x update-v2.sh && ./update-v2.sh
 sleep 2
-./update-v2.sh
-sleep 5
 rm -f /root/update-v2.sh
 rm -f /home/ver
 sleep 1
