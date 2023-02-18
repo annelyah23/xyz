@@ -495,7 +495,7 @@ EOF
 
 clear
 echo -e ""
-echo -e "═══════════════════"
+echo -e "════[XRAY VMESS WS]═════"
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
 echo -e "Port TLS          : 443"
@@ -520,4 +520,4 @@ echo -e "Expired On        : $exp"
 echo -e "═══════════════════"
 echo -e ""
 echo -e "Autoscript By JsPhantom"
-echo -e ""�
+echo -e ""
