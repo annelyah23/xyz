@@ -24,7 +24,6 @@ else
 echo -e " Cron				: "$red"Not Running (Error)"$NC""
 fi
 
-status="$(systemctl show nginx.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -33,7 +32,6 @@ else
 echo -e " Nginx				: "$red"Not Running (Error)"$NC""
 fi
 
-status="$(systemctl show fail2ban.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -42,7 +40,6 @@ else
 echo -e " Fail2ban			: "$red"Not Running (Error)"$NC""
 fi
 
-status="$(systemctl show xray.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -51,7 +48,6 @@ else
 echo -e " XRAY Vmess TLS			: "$red"Not Running (Error)"$NC""
 fi
 
-status="$(systemctl show xray@vless.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
