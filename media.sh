@@ -91,7 +91,7 @@ function MediaUnlockTest_Netflix() {
 }
 
 function MediaUnlockTest_HotStar() {
-    echo -n -e " HotStar\t\t\t\t->\c"
+    echo -n -e " HotStar\t\t\t\t->\c";
     local result=$(curl $useNIC $xForward --user-agent "${UA_Browser}" -${1} ${ssll} -fsL --write-out %{http_code} --output /dev/null --max-time 10 "https://api.hotstar.com/o/v1/page/1557?offset=0&size=20&tao=0&tas=20")
     if [ "$result" = "000" ]; then
         echo -n -e "\r HotStar\t\t\t\t: ${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
@@ -164,13 +164,13 @@ function MediaUnlockTest_Viu_com() {
 }
 
 function MediaUnlockTest_DisneyPlus() {
-    echo -n -e " Disney+:\t\t\t\t->\c"
+    echo -n -e " Disney+\t\t\t\t->\c";
     local PreAssertion=$(curl $useNIC -${1} --user-agent "${UA_Browser}" -s --max-time 10 -X POST "https://global.edge.bamgrid.com/devices" -H "authorization: Bearer ZGlzbmV5JmJyb3dzZXImMS4wLjA.Cu56AgSfBTDag5NiRA81oLHkDZfu5L3CKadnefEAY84" -H "content-type: application/json; charset=UTF-8" -d '{"deviceFamily":"browser","applicationRuntime":"chrome","deviceProfile":"windows","attributes":{}}' 2>&1)
     if [[ "$PreAssertion" == "curl"* ]] && [[ "$1" == "6" ]]; then
         echo -n -e "\r Disney+:\t\t\t\t${Font_Red}IPv6 Not Support${Font_Suffix}\n"
         return
     elif [[ "$PreAssertion" == "curl"* ]]; then
-        echo -n -e "\r Disney+:\t\t\t\t${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
+        echo -n -e "\r Disney+\t\t\t\t: ${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
         return
     fi
     local assertion=$(echo $PreAssertion | python -m json.tool 2>/dev/null | grep assertion | cut -f4 -d'"')
@@ -181,17 +181,17 @@ function MediaUnlockTest_DisneyPlus() {
     local is403=$(echo $TokenContent | grep '403 ERROR')
 
     if [ -n "$isBanned" ] || [ -n "$is403" ]; then
-        echo -n -e "\r Disney+:\t\t\t\t${Font_Red}No${Font_Suffix}\n"
+        echo -n -e "\r Disney+\t\t\t\t: ${Font_Red}No${Font_Suffix}\n"
         return
     fi
 }    
 
 function MediaUnlockTest_iQYI_Region() {
-    echo -n -e " iQyi Oversea Region:\t\t\t->\c"
+    echo -n -e " iQyi Oversea Region\t\t\t->\c";
     curl $useNIC -${1} ${ssll} -s -I --max-time 10 "https://www.iq.com/" >~/iqiyi
 
     if [ $? -eq 1 ]; then
-        echo -n -e "\r iQyi Oversea Region:\t\t\t${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
+        echo -n -e "\r iQyi Oversea Region\t\t\t: ${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
         return
     fi
 
@@ -199,44 +199,44 @@ function MediaUnlockTest_iQYI_Region() {
     if [ -n "$result" ]; then
         if [[ "$result" == "ntw" ]]; then
             result=TW
-            echo -n -e "\r iQyi Oversea Region:\t\t\t${Font_Green}${result}${Font_Suffix}\n"
+            echo -n -e "\r iQyi Oversea Region\t\t\t: ${Font_Green}${result}${Font_Suffix}\n"
             rm ~/iqiyi >/dev/null 2>&1
             return
         else
             result=$(echo $result | tr [:lower:] [:upper:])
-            echo -n -e "\r iQyi Oversea Region:\t\t\t${Font_Green}${result}${Font_Suffix}\n"
+            echo -n -e "\r iQyi Oversea Region\t\t\t:${Font_Green}${result}${Font_Suffix}\n"
             rm ~/iqiyi >/dev/null 2>&1
             return
         fi
     else
-        echo -n -e "\r iQyi Oversea Region:\t\t\t${Font_Red}Failed${Font_Suffix}\n"
+        echo -n -e "\r iQyi Oversea Region\t\t\t: ${Font_Red}Failed${Font_Suffix}\n"
         rm ~/iqiyi >/dev/null 2>&1
         return
     fi
 } 
 
 function MediaUnlockTest_Tiktok_Region() {
-    echo -n -e " Tiktok Region:\t\t\t\t->\c"
+    echo -n -e " Tiktok Region\t\t\t\t->\c";
     local Ftmpresult=$(curl $useNIC -${1} ${ssll} --user-agent "${UA_Browser}" -s --max-time 10 "https://www.tiktok.com/")
 
     if [ "$Ftmpresult" = "curl"* ]; then
-        echo -n -e "\r Tiktok Region:\t\t\t\t${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
+        echo -n -e "\r Tiktok Region\t\t\t\t${Font_Red}Failed (Network Connection)${Font_Suffix}\n"
         return
     fi
 
     local FRegion=$(echo $Ftmpresult | grep '"$region":"' | sed 's/.*"$region//' | cut -f3 -d'"')
     if [ -n "$FRegion" ]; then
-        echo -n -e "\r Tiktok Region:\t\t\t\t${Font_Green}${FRegion}${Font_Suffix}\n"
+        echo -n -e "\r Tiktok Region\t\t\t\t: ${Font_Green}${FRegion}${Font_Suffix}\n"
         return
     fi
 
     local STmpresult=$(curl $useNIC -${1} ${ssll} --user-agent "${UA_Browser}" -s --max-time 10 "https://www.tiktok.com/" -b "s_v_web_id=verify_57c6380f8e4c609135d2afc9894e35ca; tt_csrf_token=73Z-2VskmVwMX0PyUtin6WWI; MONITOR_WEB_ID=verify_57c6380f8e4c609135d2afc9894e35ca")
     local SRegion=$(echo $STmpresult | grep '"$region":"' | sed 's/.*"$region//' | cut -f3 -d'"')
     if [ -n "$SRegion" ]; then
-        echo -n -e "\r Tiktok Region:\t\t\t\t${Font_Yellow}${SRegion} (IDC IP Detected)${Font_Suffix}\n"
+        echo -n -e "\r Tiktok Region\t\t\t\t: ${Font_Yellow}${SRegion} (IDC IP Detected)${Font_Suffix}\n"
         return
     else
-        echo -n -e "\r Tiktok Region:\t\t\t\t${Font_Red}Failed${Font_Suffix}\n"
+        echo -n -e "\r Tiktok Region\t\t\t\t: ${Font_Red}Failed${Font_Suffix}\n"
         return
     fi
 }
