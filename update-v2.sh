@@ -25,20 +25,20 @@ if [[ -e /usr/local/bin/xray ]]; then
 	 rm ins-helium
 	 rm limit
 	 rm menu
-	 #rm add-tr
-         #rm add-vless
-         #rm add-ws
-         #rm user-tr
-         #rm user-vless
+	 rm add-tr
+         rm add-vless
+         rm add-ws
+         rm user-tr
+         rm user-vless
 	 wget -O nf "https://${Server_URL}/media.sh" && chmod +x nf
 	 wget -O ins-helium "https://${Server_URL}/ins-helium.sh" && chmod +x ins-helium
 	 wget -O menu "https://${Server_URL}/menu.sh" && chmod +x menu
 	 wget -O limit "https://${Server_URL}/limit-speed.sh" && chmod +x limit
-	 #wget -O add-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/add-tr.sh" && chmod +x add-tr
-	 #wget -O add-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/add-vless.sh" && chmod +x add-vless
-	 #wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
-	 #wget -O user-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/user-tr.sh" && chmod +x user-tr
-	 #wget -O user-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/user-vless.sh" && chmod +x user-vless
+	 wget -O add-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/add-tr.sh" && chmod +x add-tr
+	 wget -O add-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/add-vless.sh" && chmod +x add-vless
+	 wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
+	 wget -O user-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/user-tr.sh" && chmod +x user-tr
+	 wget -O user-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/user-vless.sh" && chmod +x user-vless
 	 echo ""
 	 echo -e "[${green}INFO${NC}] Successfully Install New Update File !"
 	 sleep 1
@@ -64,20 +64,20 @@ else
 	 rm ins-helium
 	 rm limit
 	 rm menu
-	 #rm add-tr
-         #rm add-vless
-         #rm add-ws
-         #rm user-tr
-         #rm user-vless
+	 rm add-tr
+         rm add-vless
+         rm add-ws
+         rm user-tr
+         rm user-vless
 	 wget -O nf "https://${Server_URL}/media.sh" && chmod +x nf
 	 wget -O ins-helium "https://${Server_URL}/ins-helium.sh" && chmod +x ins-helium
 	 wget -O menu "https://${Server_URL}/menu.sh" && chmod +x menu
 	 wget -O limit "https://${Server_URL}/limit-speed.sh" && chmod +x limit
-	 #wget -O add-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/add-tr.sh" && chmod +x add-tr
-	 #wget -O add-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/add-vless.sh" && chmod +x add-vless
-	 #wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
-	 #wget -O user-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/user-tr.sh" && chmod +x user-tr
-	 #wget -O user-vless "https://raw.githubusercontent.com/annelyah23/xyz/main//user-vless.sh" && chmod +x user-vless
+	 wget -O add-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/add-tr.sh" && chmod +x add-tr
+	 wget -O add-vless "https://raw.githubusercontent.com/annelyah23/xyz/main/add-vless.sh" && chmod +x add-vless
+	 wget -O add-ws "https://raw.githubusercontent.com/annelyah23/xyz/main/add-ws.sh" && chmod +x add-ws
+	 wget -O user-tr "https://raw.githubusercontent.com/annelyah23/xyz/main/user-tr.sh" && chmod +x user-tr
+	 wget -O user-vless "https://raw.githubusercontent.com/annelyah23/xyz/main//user-vless.sh" && chmod +x user-vless
 	 echo ""
 	 echo -e "[${green}INFO${NC}] Successfully Install New Update File !"
 	 sleep 1
