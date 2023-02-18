@@ -142,7 +142,7 @@ sleep 2
 cd
 wget -q -O /root/update-v2.sh "https://raw.githubusercontent.com/annelyah23/xyz/main/update-v2.sh" && chmod +x update-v2.sh && ./update-v2.sh
 sleep 2
-./install_up.sh
+./update-v2.sh
 sleep 5
 rm -f /root/update-v2.sh
 rm -f /home/ver
@@ -193,11 +193,11 @@ echo -e "\e[36m╔============================================╝\033[0m"
 echo -e "\e[36m╒============================================╗\033[0m"
 echo -e " \033[35;1m                \033[0;33m \033[35;1mXRAY MENU                  \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m
- ${NC}[\033[1;36m•1 \033[0m]  ${NC}\033[0;32mXRAY Vmess WS Panel
- ${NC}[\033[1;36m•2 \033[0m]  ${NC}\033[0;32mXRAY Vless WS Panel
- ${NC}[\033[1;36m•3 \033[0m]  ${NC}\033[0;32mXRAY Trojan WS Panel
- ${NC}[\033[1;36m•4 \033[0m]  ${NC}\033[0;32mXRAY Trojan TCP XTLS Panel
- ${NC}[\033[1;36m•5 \033[0m]  ${NC}\033[0;32mXRAY Trojan TCP Panel"
+ ${NC}[\033[1;36m•1 \033[0m]  ${NC}\033[0;32mVmess WS Panel
+ ${NC}[\033[1;36m•2 \033[0m]  ${NC}\033[0;32mVless WS Panel
+ ${NC}[\033[1;36m•3 \033[0m]  ${NC}\033[0;32mTrojan WS Panel
+ ${NC}[\033[1;36m•4 \033[0m]  ${NC}\033[0;32mrojan TCP XTLS Panel
+ ${NC}[\033[1;36m•5 \033[0m]  ${NC}\033[0;32mTrojan TCP Panel"
 echo -e "\e[36m╔============================================╗\033[0m"
 echo -e " \033[35;1m              \033[0;33m  \033[35;1mOTHERS MENU \033[0;33m                \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m
