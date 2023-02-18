@@ -144,8 +144,8 @@ systemctl restart xray@vless.service
 systemctl restart xray@vnone.service
 service cron restart
 
-vlesslink1="vless://${uuid}@${sts}${domain}:443?type=ws&encryption=none&security=tls&host=${domain}&path=/vless-tls&allowInsecure=1&sni=${sni}#XRAY_VLESS_TLS_${user}"
-vlesslink2="vless://${uuid}@${sts}${domain}:80?type=ws&encryption=none&security=none&host=${domain}&path=/vless-ntls#XRAY_VLESS_NON_TLS_${user}"
+vlesslink1="vless://${uuid}@${sts}${domain}:443?type=ws&encryption=none&security=tls&host=${domain}&path=/vless-tls&allowInsecure=1&sni=${sni}#Xray_Vless_Tls_${user}"
+vlesslink2="vless://${uuid}@${sts}${domain}:80?type=ws&encryption=none&security=none&host=${domain}&path=/vless-ntls#Xray_Vless_non_TLS_${user}"
 
 cat > /home/vps/public_html/$user-VLESSTLS.yaml <<EOF
 port: 7890
@@ -278,7 +278,7 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: XRAY_VLESS_TLS_${user}
+  - name: Xray_Vless_TLS_${user}
     server: ${sts}${domain}
     port: 443
     type: vless
@@ -297,13 +297,13 @@ proxy-groups:
   - name: JsPhantom-Autoscript
     type: select
     proxies:
-      - XRAY_VLESS_TLS_${user}
+      - Xray_Vless_TLS_${user}
       - DIRECT
 rules:
   - MATCH,JsPhantom-Autoscript
 EOF
 
-cat > /home/vps/public_html/$user-VLESSNTLS.yaml <<EOF
+cat > /home/vps/public_html/$user-VlessTLS.yaml <<EOF
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -434,7 +434,7 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: XRAY_VLESS_NON_TLS_${user}
+  - name: Xray_Vless_non_TLS_${user}
     server: ${sts}${domain}
     port: 80
     type: vless
@@ -453,7 +453,7 @@ proxy-groups:
   - name: JsPhantom-Autoscript
     type: select
     proxies:
-      - XRAY_VLESS_NON_TLS_${user}
+      - Xray_Vless_non_TLS_${user}
       - DIRECT
 rules:
   - MATCH,JsPhantom-Autoscript
@@ -461,26 +461,26 @@ EOF
 
 clear
 echo -e ""
-echo -e "════[XRAY VLESS WS]═════"
-echo -e "Remarks           : ${user}"
-echo -e "Domain            : ${domain}"
-echo -e "Port TLS          : 443"
-echo -e "Port None TLS     : 80, 8080, 8880"
-echo -e "ID                : ${uuid}"
-echo -e "Security          : TLS"
-echo -e "Encryption        : None"
-echo -e "Network           : WS"
-echo -e "Path TLS          : /vless-tls"
-echo -e "Path NTLS         : /vless-ntls"
-echo -e "Multipath         : /yourpath (XRAY Core Mod Only)"
+echo -e "════[Xray Vless ws]═════"
+echo -e "Remarks       : ${user}"
+echo -e "Domain        : ${domain}"
+echo -e "Port TLS      : 443"
+echo -e "Port None TLS : 80, 8080, 8880"
+echo -e "ID            : ${uuid}"
+echo -e "Security      : TLS"
+echo -e "Encryption    : None"
+echo -e "Network       : WS"
+echo -e "Path TLS      : /vless-tls"
+echo -e "Path NTLS     : /vless-ntls"
+echo -e "Multipath     : /yourpath (XRAY Core Mod Only)"
 echo -e "═══════════════════"
 echo -e "Link WS TLS       : ${vlesslink1}"
 echo -e "═══════════════════"
 echo -e "Link WS None TLS  : ${vlesslink2}"
 echo -e "═══════════════════"
-echo -e "YAML WS TLS       : http://${MYIP2}:81/$user-VLESSTLS.yaml"
+echo -e "Yaml ws TLS       : http://${MYIP2}:81/$user-VLESSTLS.yaml"
 echo -e "═══════════════════"
-echo -e "YAML WS None TLS  : http://${MYIP2}:81/$user-VLESSNTLS.yaml"
+echo -e "Yaml ws None TLS  : http://${MYIP2}:81/$user-VlessNTls.yaml"
 echo -e "═══════════════════"
 echo -e "Created On        : $hariini"
 echo -e "Expired On        : $exp"
