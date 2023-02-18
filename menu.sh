@@ -140,10 +140,8 @@ clear
 echo -e "[ ${GREEN}INFO${NC} ] Check for Script updates . . ."
 sleep 1
 cd
-wget -q -O /usr/local/sbin/update-v2.sh "https://${Server_URL}/update-v2.sh" && chmod +x update-v2.sh && ./update-v2.sh
+wget -q -O /root/update-v2.sh "https://${Server_URL}/update-v2.sh" && chmod +x update-v2.sh && ./update-v2.sh
 sleep 1
-rm -f /root/update-v2.sh
-rm -f /home/ver
 version_check_v2=$( curl -sS https://${Server_URL}/version_check_v2)
 echo "$version_check_v2" >> /home/ver
 clear
