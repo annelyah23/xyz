@@ -16,7 +16,6 @@ echo -e "\e[36m╔============================================╗\033[0m"
 echo -e " \e[0;35m                SYSTEM STATUS               \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m"
 echo ""
-status="$(systemctl show cron.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
