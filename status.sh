@@ -16,6 +16,7 @@ echo -e "\e[36m╔============================================╗\033[0m"
 echo -e " \e[0;35m                SYSTEM STATUS               \033[0m"
 echo -e "\e[36m╚============================================╝\033[0m"
 echo ""
+status="$(systemctl show cron.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -24,6 +25,7 @@ else
 echo -e " Cron				: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show nginx.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -32,6 +34,7 @@ else
 echo -e " Nginx				: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show fail2ban.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -40,6 +43,7 @@ else
 echo -e " Fail2ban			: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show xray.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -48,6 +52,7 @@ else
 echo -e " XRAY Vmess TLS			: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show xray@vless.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -56,6 +61,7 @@ else
 echo -e " XRAY Vless TLS			: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show xray@vless.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -72,6 +78,7 @@ else
 echo -e " XRAY Vmess None TLS		: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show xray@trojanws.service --no-page)"
 status="$(systemctl show xray@vnone.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
@@ -81,6 +88,7 @@ else
 echo -e " XRAY Vless None TLS		: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show xray@trnone.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -89,6 +97,7 @@ else
 echo -e " XRAY Trojan None TLS		: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show xray@xtrojan.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
@@ -97,6 +106,7 @@ else
 echo -e " XRAY Trojan TCP XTLS		: "$red"Not Running (Error)"$NC""
 fi
 
+status="$(systemctl show xray@trojan.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
