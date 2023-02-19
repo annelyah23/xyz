@@ -92,7 +92,7 @@ domain=$(cat /root/domain)
 MYIP2=$(wget -qO- ipv4.icanhazip.com);
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
             echo -e "\033[0;34m╔============================================╗\033[0m"
-            echo -e "\033[35;1m          Add XRAY Trojan TCP Account              \033[0m"
+            echo -e "\033[35;1m          ${bold}Add XRAY Trojan TCP Account              \033[0m"
             echo -e "\033[0;34m╚============================================╝\033[0m"
 
 		read -rp "Username : " -e user
@@ -101,7 +101,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
 		    echo -e "\033[0;34m╔============================================╗\033[0m"
-            echo -e "\033[35;1m     Add XRAY Trojan TCP Account   \033[0m"
+            echo -e "\033[35;1m     ${bold}Add XRAY Trojan TCP Account   \033[0m"
             echo -e "\033[0;34m╚============================================╝\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
@@ -135,12 +135,12 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 sed -i '/#tr$/a\### '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /usr/local/etc/xray/trojan.json
-trojanlink="trojan://${uuid}@${sts}${domain}:443?security=tls&type=tcp&allowInsecure=1&sni=${sni}#XRAY_TROJAN_TCP_${user}"
+trojanlink="trojan://${uuid}@${sts}${domain}:443?security=tls&type=tcp&allowInsecure=1&sni=${sni}#Xray_Trojan_TCP_${user}"
 # // Restarting Service
 systemctl restart xray@trojan.service
 service cron restart
 
-cat > /home/vps/public_html/$user-TRTCP.yaml <<EOF
+cat > /home/vps/public_html/$user-TrojanTCP.yaml <<EOF
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -271,7 +271,7 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: XRAY_TROJAN_TCP_${user}
+  - name: Xray_Trojan_TCP_${user}
     server: ${sts}${domain}
     port: 443
     type: trojan
@@ -291,9 +291,10 @@ EOF
 
 clear
 echo -e ""
-echo -e "════[XRAY TROJAN TCP]════"
+echo -e "════[${bold}Xray Trojan TCP]════"
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
+echo -e "IP Address        : $IPVPS"
 echo -e "Port              : 443"
 echo -e "Key               : ${uuid}"
 echo -e "Network           : TCP"
@@ -308,5 +309,5 @@ echo -e "Created On        : $hariini"
 echo -e "Expired On        : $exp"
 echo -e "═══════════════════"
 echo -e ""
-echo -e "Autoscript By JsPhantom"
-echo -e ""�
+echo -e "Autoscript By ${bold}JsPhantom"
+echo -e ""
