@@ -87,7 +87,7 @@ domain=$(cat /root/domain)
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		echo -e "\033[0;34m╔============================================╗\033[0m"
-        echo -e "\033[35;1m       Add XRAY Trojan TCP XTLS Account  \033[0m"
+        echo -e "\033[35;1m       ${bold}Add XRAY Trojan TCP XTLS Account  \033[0m"
         echo -e "\033[0;34m╚============================================╝\033[0m"
 		read -rp "Username : " -e user
 		CLIENT_EXISTS=$(grep -w $user /usr/local/etc/xray/xtrojan.json | wc -l)
@@ -95,7 +95,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
 		echo -e "\033[0;34m╔============================================╗\033[0m"
-        echo -e "\033[35;1m  Add XRAY Trojan TCP XTLS Account  \033[0m"
+        echo -e "\033[35;1m ${bold} Add XRAY Trojan TCP XTLS Account  \033[0m"
         echo -e "\033[0;34m╚============================================╝\033[0m"
 		echo ""
 		echo "A client with the specified name was already created, please choose another name."
@@ -139,7 +139,7 @@ trojanlink4="trojan://${uuid}@${sts}${domain}:443?allowInsecure=1&security=xtls&
 systemctl restart xray@xtrojan.service
 service cron restart
 
-cat > /home/vps/public_html/$user-TRDIRECT.yaml <<EOF
+cat > /home/vps/public_html/$user-TRDirect.yaml <<EOF
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -289,7 +289,7 @@ rules:
   - MATCH,JsPhantom-AUTOSCRIPT
 EOF
 
-cat > /home/vps/public_html/$user-TRSPLICE.yaml <<EOF
+cat > /home/vps/public_html/$user-TRSplice.yaml <<EOF
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -420,7 +420,7 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: XRAY_TROJAN_SPLICE_${user}
+  - name: Xray_Trojan_Splice_${user}
     server: ${sts}${domain}
     port: 443
     type: trojan
@@ -441,9 +441,10 @@ EOF
 
 clear
 echo -e ""
-echo -e "════[XRAY TROJAN TCP XTLS]═════"
+echo -e "════[${bold}Xray Trojan TCP XTLS]═════"
 echo -e "Remarks              : ${user}"
 echo -e "Domain               : ${domain}"
+echo -e "IP Address           : $IPVPS"
 echo -e "Password             : ${uuid}"
 echo -e "Port Direct          : 443"
 echo -e "Port Splice          : 443"
@@ -469,5 +470,5 @@ echo -e "Created On           : $hariini"
 echo -e "Expired On           : $exp"
 echo -e "═══════════════════"
 echo -e ""
-echo -e "Autoscript By JsPhantom"
-echo -e ""�
+echo -e "Autoscript By ${bold}JsPhantom"
+echo -e ""
