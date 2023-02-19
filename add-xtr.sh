@@ -22,6 +22,7 @@ tyblue() { echo -e "\\033[36;1m${*}\\033[0m"; }
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+IPVPS=$(curl -s icanhazip.com/ip )
 cek=$( curl -sS https://raw.githubusercontent.com/annelyah23/IP/main/access | awk '{print $2}'  | grep $MYIP )
 Name=$(curl -sS https://raw.githubusercontent.com/annelyah23/IP/main/access | grep $MYIP | awk '{print $4}')
 if [[ $cek = $MYIP ]]; then
