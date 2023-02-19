@@ -15,7 +15,7 @@ NC='\e[0m'
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/trojanws.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "\033[0;34m╔============================================╗\033[0m"
-echo -e "\e[0;35m           XRAY Trojan WS User Login             \033[0m"
+echo -e "\e[0;35m           ${bold}Xray Trojan WS User Login             \033[0m"
 echo -e "\033[0;34m╚============================================╝\033[0m"
 for akun in "${data[@]}"
 do
@@ -47,4 +47,4 @@ fi
 rm -rf /tmp/iptrws.txt
 rm -rf /tmp/other.txt
 done
-echo ""�
+echo ""
