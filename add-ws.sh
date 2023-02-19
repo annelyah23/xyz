@@ -92,7 +92,7 @@ domain=$(cat /root/domain)
 MYIP2=$(wget -qO- ipv4.icanhazip.com);
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m╔============================================╗\033[0m"
-echo -e "\033[35;1m          Add XRAY Vmess WS Account     \033[0m"
+echo -e "\033[35;1m          ${bold}Add XRAY Vmess WS Account     \033[0m"
 echo -e "\033[0;34m╚============================================╝\033[0m"
 
                 read -rp "Username : " -e user
@@ -101,7 +101,7 @@ echo -e "\033[0;34m╚============================================╝\033[0m"
                 if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
 		                echo -e "\033[0;34m╔============================================╗\033[0m"
-                        echo -e "\033[35;1m     Add XRAY Vmess WS Account     \033[0m"
+                        echo -e "\033[35;1m     ${bold}Add XRAY Vmess WS Account     \033[0m"
                         echo -e "\033[0;34m╚============================================╝\033[0m"
                         echo ""
                         echo "A client with the specified name was already created, please choose another name."
@@ -336,7 +336,7 @@ rules:
   - MATCH,Geo-Autoscript
 EOF
 
-cat > /home/vps/public_html/$user-VMESSNTLS.yaml <<EOF
+cat > /home/vps/public_html/$user-VmessNTLS.yaml <<EOF
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -467,7 +467,7 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: XRAY_VMESS_NON_TLS_${user}
+  - name: Xray_Vmess_non_TLS_${user}
     server: ${sts}${domain}
     port: 80
     type: vmess
@@ -495,9 +495,10 @@ EOF
 
 clear
 echo -e ""
-echo -e "════[XRAY VMESS WS]═════"
+echo -e "════[${bold}Xray vmess WS]═════"
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
+echo -e "IP Address        : $IPVPS"
 echo -e "Port TLS          : 443"
 echo -e "Port None TLS     : 80, 8080, 8880"
 echo -e "ID                : ${uuid}"
@@ -519,5 +520,5 @@ echo -e "Created On        : $hariini"
 echo -e "Expired On        : $exp"
 echo -e "═══════════════════"
 echo -e ""
-echo -e "Autoscript By JsPhantom"
+echo -e "Autoscript By ${bold}JsPhantom"
 echo -e ""
