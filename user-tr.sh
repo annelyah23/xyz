@@ -13,6 +13,7 @@ tyblue='\e[1;36m'
 purple='\e[0;35m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipv4.icanhazip.com);
+IPVPS=$(curl -s icanhazip.com/ip )
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/trojanws.json")
         if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
                 echo -e "\033[0;34m╔============================================╗\033[0m"
@@ -69,9 +70,10 @@ trojanlink2="trojan://${uuid}@${sts}${domain}:80?type=ws&security=none&host=${do
 
 clear
 echo -e ""
-echo -e "═══[XRAY TROJAN WS]═══"
+echo -e "═══[Xray Trojan WS]═══"
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
+echo -e "IP Address        : $IPVPS"
 echo -e "Port TLS          : 443"
 echo -e "Port None TLS     : 80, 8080, 8880"
 echo -e "ID                : ${uuid}"
