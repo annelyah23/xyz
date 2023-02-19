@@ -92,7 +92,7 @@ domain=$(cat /root/domain)
 MYIP2=$(wget -qO- ipv4.icanhazip.com);
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		echo -e "\033[0;34m╔============================================╗\033[0m"
-        echo -e "\033[35;1m           Add XRAY Vless WS Account     \033[0m"
+        echo -e "\033[35;1m           ${bold}Add XRAY Vless WS Account     \033[0m"
         echo -e "\033[0;34m╚============================================╝\033[0m"
 
 		read -rp "Username : " -e user
@@ -101,7 +101,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
 		     echo -e "\033[0;34m╔============================================╗\033[0m"
-            echo -e "\033[35;1m      Add XRAY Vless Account       \033[0m"
+            echo -e "\033[35;1m      ${bold}Add XRAY Vless Account       \033[0m"
             echo -e "\033[0;34m╚============================================╝\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
@@ -147,7 +147,7 @@ service cron restart
 vlesslink1="vless://${uuid}@${sts}${domain}:443?type=ws&encryption=none&security=tls&host=${domain}&path=/vless-tls&allowInsecure=1&sni=${sni}#Xray_Vless_Tls_${user}"
 vlesslink2="vless://${uuid}@${sts}${domain}:80?type=ws&encryption=none&security=none&host=${domain}&path=/vless-ntls#Xray_Vless_non_TLS_${user}"
 
-cat > /home/vps/public_html/$user-VLESSTLS.yaml <<EOF
+cat > /home/vps/public_html/$user-VlessTLS.yaml <<EOF
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -461,9 +461,10 @@ EOF
 
 clear
 echo -e ""
-echo -e "════[Xray Vless ws]═════"
+echo -e "════[${bold}Xray Vless ws]═════"
 echo -e "Remarks       : ${user}"
 echo -e "Domain        : ${domain}"
+echo -e "IP Address    : $IPVPS"
 echo -e "Port TLS      : 443"
 echo -e "Port None TLS : 80, 8080, 8880"
 echo -e "ID            : ${uuid}"
@@ -486,5 +487,5 @@ echo -e "Created On        : $hariini"
 echo -e "Expired On        : $exp"
 echo -e "═══════════════════"
 echo -e ""
-echo -e "Autoscript By JsPhantom"
+echo -e "Autoscript By ${bold}JsPhantom"
 echo -e ""
