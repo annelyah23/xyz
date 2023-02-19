@@ -14,7 +14,7 @@ NC='\e[0m'
 N='\e[0m'
 clear
 echo -e "\e[36m╔===========================================╗\033[0m"
-echo -e " \e[0;35m                DNS CHANGER                \033[0m"
+echo -e " \e[0;35m                ${bold}DNS Changer                \033[0m"
 echo -e "\e[36m╚===========================================╝\033[0m
 \033[0;32mDNS Changer By${NC} \e[1;33mJsPhantom\033[0m
 \033[1;37mTelegram : https://t.me/JsPhantom / @JsPhantom\033[0m"
