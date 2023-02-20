@@ -71,7 +71,7 @@ BURIQ() {
 }
 
 MYIP=$(wget -qO- ipv4.icanhazip.com);
-Name=$(curl -sS https://raw.githubusercontent.com/wunuit/IP/main/access | grep $MYIP | awk '{print $4}')
+Name=$(curl -sS https://raw.githubusercontent.com/annelyah23/IP/main/access | grep $MYIP | awk '{print $4}')
 echo $Name >/usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -88,7 +88,7 @@ Bloman() {
 
 PERMISSION() {
     MYIP=$(wget -qO- ipv4.icanhazip.com);
-    IZIN=$(curl -sS https://raw.githubusercontent.com/wunuit/IP/main/access | awk '{print $2}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/annelyah23/IP/main/access | awk '{print $2}' | grep $MYIP)
     if [[ "$MYIP" = "$IZIN" ]]; then
         Bloman
     else
@@ -130,7 +130,7 @@ fi
 mkdir /var/lib/premium-script;
 mkdir /var/lib/crot-script;
 clear
-#echo -e "${red}♦️${NC} ${green}Established By wunuit 2022${NC} ${red}♦️${NC}"
+#echo -e "${red}♦️${NC} ${green}Established By JsPhantom 2022${NC} ${red}♦️${NC}"
 #DOWNLOAD SOURCE SCRIPT
 echo -e "${red}    ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
 echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -186,7 +186,7 @@ sleep 2
 clear
 
 #rm -rf /usr/share/nginx/html/index.html
-#wget -q -O /usr/share/nginx/html/index.html "https://raw.githubusercontent.com/wunuit/Multiport/main/OTHERS/index.html"
+#wget -q -O /usr/share/nginx/html/index.html "https://raw.githubusercontent.com/annelyah23/xyz/main/index.html"
 
 # Finish
 rm -f /root/ins-xray.sh
@@ -197,53 +197,46 @@ rm -f /root/ssh-vpn.sh
 echo "1.0" > /home/ver
 clear
 echo ""
-echo -e "${RB}      .-------------------------------------------.${NC}"
-echo -e "${RB}      |${NC}      ${CB}Installation Has Been Completed${NC}      ${RB}|${NC}"
-echo -e "${RB}      '-------------------------------------------'${NC}"
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "      ${WB}Multiport Websocket Autoscript By wunuit${NC}"
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "  ${WB}»»» Protocol Service «««  |  »»» Network Protocol «««${NC}  "
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Vmess Websocket${NC}         ${WB}|${NC}  ${YB}- Websocket (CDN) TLS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Vless Websocket${NC}         ${WB}|${NC}  ${YB}- Websocket (CDN) NTLS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Trojan Websocket${NC}        ${WB}|${NC}  ${YB}- TCP XTLS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Trojan TCP XTLS${NC}         ${WB}|${NC}  ${YB}- TCP TLS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Trojan TCP${NC}              ${WB}|${NC}"
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "           ${WB}»»» YAML Service Information «««${NC}          "
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}YAML XRAY VMESS WS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}YAML XRAY VLESS WS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}YAML XRAY TROJAN WS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}YAML XRAY TROJAN XTLS${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}YAML XRAY TROJAN TCP${NC}"
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "             ${WB}»»» Server Information «««${NC}                 "
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Timezone                : Asia/Kuala_Lumpur (GMT +8)${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Fail2Ban                : [ON]${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Dflate                  : [ON]${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}IPtables                : [ON]${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Auto-Reboot             : [ON]${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}IPV6                    : [OFF]${NC}"
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "${RB}          🚀 ${NC} ${WB}${bold}Premium Autoscript By JsPhantom ${NC} ${RB}🚀 ${NC}"
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "                  ${WB}»»» ${bold}Info Xray «««${NC}"
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Xray Vmess Ws Tls : 443${NC}   ${WB}|${NC}  ${GB}✅${NC} ${YB}${bold}Websocket (CDN) TLS : 443${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Xray Vless Ws Tls : 443${NC}   ${WB}|${NC}  ${GB}✅${NC} ${YB}${bold}Websocket (CDN) NTLS :80${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Xray Trojan Ws Tls : 443${NC}  ${WB}|${NC}  ${GB}✅${NC} ${YB}${bold}TCP XTLS :443${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Trojan TCP XTLS : 443${NC}     ${WB}|${NC}  ${GB}✅${NC} ${YB}${bold}TCP TLS : 443${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Trojan TCP : 443${NC}          ${WB}|${NC}"
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "           ${WB}»»» ${bold}YAML Service Information «««${NC}          "
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "  ${GB}✅${NC} ${YB}Yaml Xray Vmess WS${NC}"
+echo -e "  ${GB}✅${NC} ${YB}Yaml Xray Vless WS${NC}"
+echo -e "  ${GB}✅${NC} ${YB}Yaml Xray Trojan WS${NC}"
+echo -e "  ${GB}✅${NC} ${YB}Yaml Xray Trojan XTLS${NC}"
+echo -e "  ${GB}✅${NC} ${YB}Yaml Xray Trojan TCP${NC}"
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "             ${WB}»»» ${bold}Server Information «««${NC}                 "
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "  ${MB}♦️${NC} ${YB}${bold}Timezone           ${GB}: ${bold}Asia/Kuala_Lumpur (GMT +8)${NC}"
+echo -e "  ${MB}♦️${NC} ${YB}${bold}Fail2Ban           ${GB}: ${bold}[ON]${NC}"
+echo -e "  ${MB}♦️${NC} ${YB}${bold}Dflate             ${GB}: ${bold}[ON]${NC}"
+echo -e "  ${MB}♦️${NC} ${YB}${bold}IPtables           ${GB}: ${bold}[ON]${NC}"
+echo -e "  ${MB}♦️${NC} ${YB}${bold}Auto-Reboot        ${GB}: ${bold}[ON]${NC}"
+echo -e "  ${MB}♦️${NC} ${YB}${bold}IPV6               ${GB}: ${NC}${bold}${RB}[OFF]${NC}"
 echo -e ""
-echo -e "  ${RB}♦️${NC} ${YB}Autoreboot On 06.00 GMT +8${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Backup & Restore VPS Data${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Automatic Delete Expired Account${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Bandwith Monitor${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}RAM & CPU Monitor${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Check Login User${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Check Created Config${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Automatic Clear Log${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}Media Checker${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}DNS Changer${NC}"
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "              ${WB}»»» Network Port Service «««${NC}             "
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}HTTP                    : 443${NC}"
-echo -e "  ${RB}♦️${NC} ${YB}HTTPS                   : 80, 8080, 8880${NC}"
-echo -e "${BB}————————————————————————————————————————————————————————${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Autoreboot On 06.00 GMT +8${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Backup & Restore VPS Data${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Automatic Delete Expired Account${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Bandwith Monitor${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Check Login User${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Check Created Config${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Automatic Clear Log${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}Media Checker${NC}"
+echo -e "  ${GB}✅${NC} ${YB}${bold}DNS Changer${NC}"
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"
+echo -e "           ${WB}»»» ${bold}Autoscript By JsPhantom «««${NC}             "
+echo -e "${CB}————————————————————————————————————————————————————————${NC}"${NC}"
 echo ""
 secs_to_human "$(($(date +%s) - ${start}))"
 echo ""
