@@ -164,7 +164,9 @@ echo "$host" >> /root/domain
 #Install SSH-VPN
 echo -e "\e[0;32mINSTALLING SSH-VPN...\e[0m"
 sleep 1
-wget https://${Server_URL}/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget -q -O /root/ssh-vpn.sh "https://${Server_URL}/ssh-vpn.sh"
+chmod +x /root/ssh-vpn.sh
+./ssh-vpn.sh
 sleep 3
 clear
 echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
