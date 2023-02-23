@@ -213,7 +213,7 @@ echo -e "$COLOR1 ${NC} ${COLBG1}                     ${WH}${bold}XRAY MENU      
 echo -e "$COLOR1╚======================================================╝\033[0m"
 echo -e " ${NC}[\033[1;36m${bold}•1\033[0m]  \033[0;32m${bold}Vmess WS Panel    ${NC}[\033[1;36m${bold}•4\033[0m]  \033[0;32m${bold}Trojan TCP XTLS Panel"
 echo -e " ${NC}[\033[1;36m${bold}•2\033[0m]  \033[0;32m${bold}Vless WS Panel    ${NC}[\033[1;36m${bold}•5\033[0m]  \033[0;32m${bold}Trojan TCP Panel"     
-echo -e " ${NC}[\033[1;36m${bold}•3\033[0m]  \033[0;32m${bold}Trojan WS Panel"
+echo -e " ${NC}[\033[1;36m${bold}•3\033[0m]  \033[0;32m${bold}Trojan WS Panel   ${NC}[\033[1;36m${bold}•26\033[0m]  \033[0;32m${bold}SSh"
 echo -e "$COLOR1╔======================================================╗\033[0m"
 echo -e "$COLOR1 ${COLBG1}                     ${WH}${bold}OTHERS MENU                 ${NC}$COLOR1${NC}"
 echo -e "$COLOR1╚======================================================╝\033[0m"
@@ -267,6 +267,7 @@ case $opt in
 23) clear ; reboot ;;
 24) clear ; $up2u ; read -n1 -r -p "Press any key to continue..." ; menu ;;
 25) clear ; menu-theme ; read -n1 -r -p "Press any key to continue..." ; menu ;;
+26) clear ; m-sshovpn ; menu ;;
 00 | 0) clear ; menu ;;
 x | X) exit ;;
 *) clear ; menu ;;
