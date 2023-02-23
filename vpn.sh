@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/annelyah23/IP/main/access | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
@@ -28,7 +28,6 @@ fi
 # By TARAP KUHING
 # ==================================================
 # Link Hosting Kalian
-tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh"
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
