@@ -174,6 +174,8 @@ sleep 3
 wget -q -O /root/xray.sh "https://${Server_URL}/xray.sh"
 chmod +x /root/xray.sh
 ./xray.sh
+sleep 1
+wget https://raw.githubusercontent.com/annelyah23/xyz/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 echo -e "${GREEN}Done!${NC}"
 sleep 2
 clear
@@ -183,17 +185,18 @@ sleep 1
 wget -q -O /root/set-br.sh "https://${Server_URL}/set-br.sh"
 chmod +x /root/set-br.sh
 ./set-br.sh
+wget -q -O /usr/share/nginx/html/index.html "https://raw.githubusercontent.com/annelyah23/xyz/main/index.html"
 echo -e "${GREEN}Done!${NC}"
 sleep 2
 clear
 
-#rm -rf /usr/share/nginx/html/index.html
-#wget -q -O /usr/share/nginx/html/index.html "https://raw.githubusercontent.com/annelyah23/xyz/main/index.html"
 
 # Finish
+rm -f /root/ohp.sh
 rm -f /root/ins-xray.sh
 rm -f /root/set-br.sh
 rm -f /root/ssh-vpn.sh
+rm -rf /usr/share/nginx/html/index.html
 
 # Version
 echo "1.0" > /home/ver
